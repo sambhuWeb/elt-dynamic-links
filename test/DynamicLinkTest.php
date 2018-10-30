@@ -68,6 +68,14 @@ class DynamicLinkTest extends TestCase
                     'link' => 'http://www.easyhindityping.com/english-to-burmese-translation',
                     'titile' => 'Translate english word, sentence & phrase into Burmese for free'
                 ] 
+            ],
+            [
+                'lo',
+                [
+                    'label' => 'Lao Translation',
+                    'link' => 'http://www.easyhindityping.com/english-to-lao-translation',
+                    'titile' => 'Translate english word, sentence & phrase into Lao for free'
+                ] 
             ]
         ];
     }
