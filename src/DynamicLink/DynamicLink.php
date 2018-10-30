@@ -4,8 +4,10 @@ namespace ELT\DynamicLink;
 
 class DynamicLink
 {
-    public function getLink(array $dynamicLinks, String $countryCode): array
+    public function getLink(String $countryCode, String $linkClass, array $inputData = []): array
     {
-        return $dynamicLinks[$countryCode];
+        $class = 'ELT\\DynamicLink\\' . $linkClass;
+        
+        return (new $class())->getLink($countryCode, $inputData);
     }
 }
