@@ -1,0 +1,14 @@
+{
+    "name": "elt/dynamic-links",
+    "description": "Fetch dynamic links based on ip provided",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sambhu Raj Singh",
+            "email": "sambhu.raj.singh@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
