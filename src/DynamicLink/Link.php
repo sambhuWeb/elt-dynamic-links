@@ -2,16 +2,14 @@
 
 namespace ELT\DynamicLink;
 
-class Link implements LinkInterface
+abstract class Link implements LinkInterface
 {
     protected $link = [];
 
-    public function getLink(String $countryCode, array $inputData = []): array
-    {
-        if (!empty($inputData)) {
-            return $inputData[$countryCode];
-        }
-        
-        return $this->links[$countryCode];
+    public function getLink(String $countryCode): array
+    {   
+        return $this->links()[$countryCode];
     }
+
+    protected abstract function links(): array;
 }

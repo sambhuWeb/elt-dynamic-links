@@ -4,9 +4,9 @@ namespace ELT\DynamicLink;
 
 class TypingLink extends Link
 {
-    public function __construct()
+    public function links(): array
     {
-        $this->links = [
+        return [
             'th' => [
                 'label' => 'Thai Typing',
                 'link' => 'http://www.easythaityping.com',
