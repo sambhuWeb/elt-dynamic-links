@@ -4,9 +4,6 @@ namespace test;
 
 use PHPUnit\Framework\TestCase;
 use ELT\DynamicLink\DynamicLink;
-use ELT\DynamicLink\LinkInterface;
-use ELT\DynamicLink\TranslationLink;
-use ELT\DynamicLink\TypingLink;
 
 class DynamicLinkTest extends TestCase
 {

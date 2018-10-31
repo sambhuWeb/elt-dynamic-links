@@ -2,8 +2,6 @@
 
 namespace ELT\DynamicLink;
 
-use ELT\DynamicLink\LinkInterface;
-
 class Link implements LinkInterface
 {
     protected $link = [];

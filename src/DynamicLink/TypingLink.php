@@ -2,9 +2,6 @@
 
 namespace ELT\DynamicLink;
 
-use ELT\DynamicLink\Link;
-use ELT\DynamicLink\LinkInterface;
-
 class TypingLink extends Link
 {
     public function __construct()
