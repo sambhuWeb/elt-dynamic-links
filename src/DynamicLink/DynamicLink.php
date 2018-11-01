@@ -23,7 +23,7 @@ class DynamicLink
 
         if (is_string($inputData)) {
             $class = 'ELT\\DynamicLink\\' . $inputData;
-            return (new $class())->getLink($countryCode);
+            return (new $class())->getLink(strtoupper($countryCode));
         }
 
         if (is_array($inputData) && !empty($inputData)) {

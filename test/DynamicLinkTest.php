@@ -13,42 +13,11 @@ class DynamicLinkTest extends TestCase
     public function setUp()
     {
         $this->dynamicLink = new DynamicLink();
-        $this->mockTranslationLinks = [
-            'th' => [
-                'label' => 'Thai Translation',
-                'link' => 'http://www.easythaityping.com',
-                'titile' => 'Translate english word, sentence & phrase into Thai for free'
-            ],
-            'my' => [
-                'label' => 'Burmese Translation',
-                'link' => 'http://www.easyhindityping.com/english-to-burmese-translation',
-                'titile' => 'Translate english word, sentence & phrase into Burmese for free'
-            ],
-            'lo' => [
-                'label' => 'Lao Translation',
-                'link' => 'http://www.easyhindityping.com/english-to-lao-translation',
-                'titile' => 'Translate english word, sentence & phrase into Lao for free'
-            ],
-        ];
-        $this->mockTypingLinks = [
-            'th' => [
-                'label' => 'Thai Typing',
-                'link' => 'http://www.easythaityping.com',
-                'titile' => 'Type in English, get in Thai for FREE.'
-            ],
-            'hi' => [
-                'label' => 'Hindi Typing',
-                'link' => 'http://www.easyhindityping.com',
-                'titile' => 'Type in English, get in Hindi for FREE.'
-            ]
-        ];
     }
 
     public function tearDown()
     {
         $this->dynamicLink = null;
-        $this->mockTranslationLinks = null;
-        $this->mockTypingLinks = null;
     }
 
     /**
@@ -91,9 +60,6 @@ class DynamicLinkTest extends TestCase
         );
     }
 
-
-     //testdox Passing get link with bad input throws various exceptions.
-
     /**
      * @test
      * @dataProvider invalidTwoDigitCountryCodeProvider
@@ -104,7 +70,7 @@ class DynamicLinkTest extends TestCase
     ) {
         $this->expectException($expectedException);
 
-        $this->dynamicLink->getLink($twoDigitCountryCode, 'TranslationLink');
+        $this->dynamicLink->getLink($twoDigitCountryCode, TranslationLink::class);
     }
 
     /**
@@ -120,25 +86,14 @@ class DynamicLinkTest extends TestCase
             [12, DomainException::class],
             ['AB', OutOfBoundsException::class],
         ];
-        // $invalidNumeric = sprintf('{^Not a valid %s key: .*$}', ISO3166::KEY_ALPHA2);
-        // $expectedString = sprintf('{^Expected \$%s to be of type string, got: .*$}', ISO3166::KEY_ALPHA2);
-        // $noMatch = sprintf('{^No "%s" key found matching: .*$}', ISO3166::KEY_ALPHA2);
-
-        // return [
-        //     ['A', DomainException::class, $invalidNumeric],
-        //     ['ABC', DomainException::class, $invalidNumeric],
-        //     [1, InvalidArgumentException::class, $expectedString],
-        //     [123, InvalidArgumentException::class, $expectedString],
-        //     ['AB', OutOfBoundsException::class, $noMatch],
-        // ];
     }
 
     public function dynamicLinkClassProvider()
     {
         return [
             [
-                'th',
-                'TranslationLink',
+                'TH',
+                \TranslationLink::class,
                 [
                     'label' => 'Thai Translation',
                     'link' => 'http://www.easythaityping.com',
@@ -146,8 +101,17 @@ class DynamicLinkTest extends TestCase
                 ],
             ],
             [
+                'my',
+                \TranslationLink::class,
+                [
+                    'label' => 'Burmese Translation',
+                    'link' => 'http://www.easyhindityping.com/english-to-burmese-translation',
+                    'titile' => 'Translate english word, sentence & phrase into Burmese for FREE.'
+                ],
+            ],
+            [
                 'th',
-                'TypingLink',
+                \TypingLink::class,
                 [
                     'label' => 'Thai Typing',
                     'link' => 'http://www.easythaityping.com',
@@ -155,12 +119,12 @@ class DynamicLinkTest extends TestCase
                 ],
             ],
             [
-                'th',
-                'TypingLink',
+                'in',
+                \TypingLink::class,
                 [
-                    'label' => 'Thai Typing',
-                    'link' => 'http://www.easythaityping.com',
-                    'titile' => 'Type in English, get in Thai for FREE.'
+                    'label' => 'Hindi Typing',
+                    'link' => 'http://www.easyhindityping.com',
+                    'titile' => 'Type in English, get in Hindi for FREE.'
                 ],
             ]
         ];
