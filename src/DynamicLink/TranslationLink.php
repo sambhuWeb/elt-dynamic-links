@@ -1,5 +1,4 @@
 <?php
-
 namespace ELT\DynamicLink;
 
 class TranslationLink extends Link

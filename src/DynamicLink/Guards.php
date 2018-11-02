@@ -1,5 +1,4 @@
 <?php
-
 namespace ELT\DynamicLink;
 
 use ELT\DynamicLink\Exception\DomainException;
@@ -12,7 +11,7 @@ final class Guards
     /**
      * Assert that two digit country code looks like an alpha2 key.
      *
-     * @param string $alpha3
+     * @param string $twoDigitCountryCode
      *
      * @throws \ELT\DynamicLink\Exception\InvalidArgumentException if input is not a string
      * @throws \ELT\DynamicLink\Exception\DomainException if input does not look like an alpha3 key

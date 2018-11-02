@@ -1,9 +1,5 @@
 <?php
-
 namespace ELT\DynamicLink;
-
-use ELT\DynamicLink\Guards;
-use League\ISO3166\ISO3166 as ISOCodes;
 
 class DynamicLink
 {
@@ -16,6 +12,12 @@ class DynamicLink
      *                                  for e.g. 'TranslationLink', 'TypingLink'
      *                                  If array, it must be the array of links with key
      *                                  as two digit country code.
+     *
+     * @throws \ELT\DynamicLink\Exception\InvalidArgumentException if input is not a string
+     * @throws \ELT\DynamicLink\Exception\DomainException if input does not look like an alpha3 key
+     * @throws \ELT\DynamicLink\Exception\OutOfBoundsException if input does not look like an alpha3 key
+     *
+     * @return array
      */
     public function getLink(String $countryCode, $inputData): array
     {

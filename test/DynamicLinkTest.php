@@ -1,11 +1,9 @@
 <?php
-
 namespace test;
 
 use PHPUnit\Framework\TestCase;
 use ELT\DynamicLink\DynamicLink;
 use ELT\DynamicLink\Exception\DomainException;
-use ELT\DynamicLink\Exception\InvalidArgumentException;
 use ELT\DynamicLink\Exception\OutOfBoundsException;
 
 class DynamicLinkTest extends TestCase

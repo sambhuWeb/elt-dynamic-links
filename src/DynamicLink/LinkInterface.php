@@ -1,5 +1,4 @@
 <?php
-
 namespace ELT\DynamicLink;
 
 interface LinkInterface

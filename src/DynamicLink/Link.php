@@ -1,5 +1,4 @@
 <?php
-
 namespace ELT\DynamicLink;
 
 abstract class Link implements LinkInterface
