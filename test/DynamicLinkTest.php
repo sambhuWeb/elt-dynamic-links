@@ -95,16 +95,16 @@ class DynamicLinkTest extends TestCase
                 [
                     'label' => 'Thai Translation',
                     'link' => 'http://www.easythaityping.com',
-                    'titile' => 'Translate english word, sentence & phrase into Thai for FREE.'
+                    'title' => 'Translate english word, sentence & phrase into Thai for FREE.'
                 ],
             ],
             [
-                'my',
+                'mm',
                 \TranslationLink::class,
                 [
                     'label' => 'Burmese Translation',
                     'link' => 'http://www.easyhindityping.com/english-to-burmese-translation',
-                    'titile' => 'Translate english word, sentence & phrase into Burmese for FREE.'
+                    'title' => 'Translate english word, sentence & phrase into Burmese for FREE.'
                 ],
             ],
             [
@@ -113,7 +113,7 @@ class DynamicLinkTest extends TestCase
                 [
                     'label' => 'Thai Typing',
                     'link' => 'http://www.easythaityping.com',
-                    'titile' => 'Type in English, get in Thai for FREE.'
+                    'title' => 'Type in English, get in Thai for FREE.'
                 ],
             ],
             [
@@ -122,7 +122,7 @@ class DynamicLinkTest extends TestCase
                 [
                     'label' => 'Hindi Typing',
                     'link' => 'http://www.easyhindityping.com',
-                    'titile' => 'Type in English, get in Hindi for FREE.'
+                    'title' => 'Type in English, get in Hindi for FREE.'
                 ],
             ]
         ];
@@ -137,23 +137,23 @@ class DynamicLinkTest extends TestCase
                     'th' => [
                         'label' => 'Thai Translation',
                         'link' => 'http://www.easythaityping.com',
-                        'titile' => 'Translate english word, sentence & phrase into Thai for free [mock data]'
+                        'title' => 'Translate english word, sentence & phrase into Thai for free [mock data]'
                     ],
                     'my' => [
                         'label' => 'Burmese Translation',
                         'link' => 'http://www.easyhindityping.com/english-to-burmese-translation',
-                        'titile' => 'Translate english word, sentence & phrase into Burmese for free [mock data]'
+                        'title' => 'Translate english word, sentence & phrase into Burmese for free [mock data]'
                     ],
                     'lo' => [
                         'label' => 'Lao Translation',
                         'link' => 'http://www.easyhindityping.com/english-to-lao-translation',
-                        'titile' => 'Translate english word, sentence & phrase into Lao for free [mock data]'
+                        'title' => 'Translate english word, sentence & phrase into Lao for free [mock data]'
                     ],
                 ],
                 [
                     'label' => 'Thai Translation',
                     'link' => 'http://www.easythaityping.com',
-                    'titile' => 'Translate english word, sentence & phrase into Thai for free [mock data]'
+                    'title' => 'Translate english word, sentence & phrase into Thai for free [mock data]'
                 ],
             ],
             [
@@ -162,18 +162,18 @@ class DynamicLinkTest extends TestCase
                     'th' => [
                         'label' => 'Thai Typing',
                         'link' => 'http://www.easythaityping.com',
-                        'titile' => 'Type in English, get in Thai for FREE. [mock data]'
+                        'title' => 'Type in English, get in Thai for FREE. [mock data]'
                     ],
                     'hi' => [
                         'label' => 'Hindi Typing',
                         'link' => 'http://www.easyhindityping.com',
-                        'titile' => 'Type in English, get in Hindi for FREE. [mock data]'
+                        'title' => 'Type in English, get in Hindi for FREE. [mock data]'
                     ]
                 ],
                 [
                     'label' => 'Thai Typing',
                     'link' => 'http://www.easythaityping.com',
-                    'titile' => 'Type in English, get in Thai for FREE. [mock data]'
+                    'title' => 'Type in English, get in Thai for FREE. [mock data]'
                 ],
             ]
         ];
