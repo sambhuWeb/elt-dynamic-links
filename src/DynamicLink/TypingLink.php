@@ -1,6 +1,8 @@
 <?php
 namespace ELT\DynamicLink;
 
+use ELT\DynamicLink\Lookup\DomainLinks;
+
 class TypingLink extends Link
 {
     public function links(): array
@@ -8,38 +10,43 @@ class TypingLink extends Link
         $links = [
             'NP' => [
                 'label' => 'Nepali Typing',
-                'link' => 'http://www.easynepalityping.com',
+                'link' => DomainLinks::$links['ent'],
                 'title' => 'Type in English, get in Nepali for FREE.'
             ],
             'IN' => [
                 'label' => 'Hindi Typing',
-                'link' => 'http://www.easyhindityping.com',
+                'link' => DomainLinks::$links['eht'],
                 'title' => 'Type in English, get in Hindi for FREE.'
             ],
             'PK' => [
                 'label' => 'Urdu Typing',
-                'link' => 'http://www.easyurdutyping.com',
+                'link' => DomainLinks::$links['eut'],
                 'title' => 'Type in English, get in Urdu for FREE.'
             ],
             'BD' => [
                 'label' => 'Bengali Typing',
-                'link' => 'http://www.easybengalityping.com',
+                'link' => DomainLinks::$links['ebt'],
                 'title' => 'Type in English, get in Bangla for FREE.'
             ],
             'LK' => [
                 'label' => 'Sinhala Typing',
-                'link' => 'http://www.easysinhalatyping.com',
+                'link' => DomainLinks::$links['est'],
                 'title' => 'Type in English, get in Sinhala for FREE.'
             ],
             'TH' => [
                 'label' => 'Thai Typing',
-                'link' => 'http://www.easythaityping.com',
+                'link' => DomainLinks::$links['etht'],
                 'title' => 'Type in English, get in Thai for FREE.'
             ],
             'IR' => [//Iran
                 'label' => 'Farsi Typing',
-                'link' => 'http://www.easypersiantyping.com',
+                'link' => DomainLinks::$links['ept'],
                 'title' => 'Type in English, get in Farsi for FREE.'
+            ],
+            'ET' => [//Ethopia
+                'label' => 'Amharic Typing',
+                'link' => DomainLinks::$links['ept'],
+                'title' => 'Type in English, get in Amharic for FREE.'
             ]
             
         ];
@@ -48,7 +55,7 @@ class TypingLink extends Link
             CountriesGroup::arabicSpeakingCountriesCode(),
             [
                 'label' => 'Arabic Typing',
-                'link' => 'http://www.easyarabictyping.com',
+                'link' => DomainLinks::$links['eat'],
                 'title' => 'Type in English, get in Arabic for FREE.'
             ]
         );

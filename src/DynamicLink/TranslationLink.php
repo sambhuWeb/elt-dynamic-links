@@ -1,7 +1,7 @@
 <?php
 namespace ELT\DynamicLink;
 
-use ELT\DynamicLink\CountriesGroup;
+use ELT\DynamicLink\Lookup\DomainLinks;
 
 class TranslationLink extends Link
 {
@@ -10,73 +10,83 @@ class TranslationLink extends Link
         $links = [
             'NP' => [
                 'label' => 'Nepali Translation',
-                'link' => 'http://www.easynepalityping.com/english-to-nepali-translation',
+                'link' => DomainLinks::$links['en-to-ne-translation'],
                 'title' => 'Translate english word, sentence & phrase into Nepali for FREE.'
             ],
             'IN' => [
                 'label' => 'Hindi Translation',
-                'link' => 'http://www.easyhindityping.com/english-to-hindi-translation',
+                'link' => DomainLinks::$links['en-to-hi-translation'],
                 'title' => 'Translate english word, sentence & phrase into Hindi for FREE.'
             ],
             'PK' => [
                 'label' => 'Urdu Translation',
-                'link' => 'http://www.easyhindityping.com/english-to-urdu-translation',
+                'link' => DomainLinks::$links['en-to-ur-translation'],
                 'title' => 'Translate english word, sentence & phrase into Urdu for FREE.'
             ],
             'BD' => [
                 'label' => 'Bengali Translation',
-                'link' => 'http://www.easyhindityping.com/english-to-bengali-translation',
+                'link' => DomainLinks::$links['en-to-bn-translation'],
                 'title' => 'Translate english word, sentence & phrase into Bangla for FREE.'
             ],
             'LK' => [
                 'label' => 'Sinhala Translation',
-                'link' => 'http://www.easyhindityping.com/english-to-sinhala-translation',
+                'link' => DomainLinks::$links['en-to-si-translation'],
                 'title' => 'Translate english word, sentence & phrase into Sinhala for FREE.'
             ],
             'MM' => [
                 'label' => 'Burmese Translation',
-                'link' => 'http://www.easyhindityping.com/english-to-burmese-translation',
+                'link' => DomainLinks::$links['en-to-my-translation'],
                 'title' => 'Translate english word, sentence & phrase into Burmese for FREE.'
             ],
             'TH' => [
                 'label' => 'Thai Translation',
-                'link' => 'http://www.easythaityping.com',
+                'link' => DomainLinks::$links['en-to-th-translation'],
                 'title' => 'Translate english word, sentence & phrase into Thai for FREE.'
             ],
             'LA' => [
                 'label' => 'Lao Translation',
-                'link' => 'http://www.easyhindityping.com/english-to-lao-translation',
+                'link' => DomainLinks::$links['en-to-lo-translation'],
                 'title' => 'Translate english word, sentence & phrase into Lao for FREE.'
             ],
             'KH' => [
                 'label' => 'Khmer Translation',
-                'link' => 'http://www.easyhindityping.com/english-to-khmer-translation',
+                'link' => DomainLinks::$links['en-to-km-translation'],
                 'title' => 'Translate english word, sentence & phrase into Khmer for FREE.'
             ],
             'VN' => [
                 'label' => 'Vietnamese Translation',
-                'link' => 'http://www.easyhindityping.com/english-to-vietnamese-translation',
+                'link' => DomainLinks::$links['en-to-vi-translation'],
                 'title' => 'Translate english word, sentence & phrase into Vietnamese for FREE.'
             ],
             'PH' => [
                 'label' => 'Filipino Translation',
-                'link' => 'http://www.easyhindityping.com/english-to-filipino-translation',
+                'link' => DomainLinks::$links['en-to-tl-translation'],
                 'title' => 'Translate english word, sentence & phrase into Filipino for FREE.'
             ],
             'ID' => [
                 'label' => 'Indonesian Translation',
-                'link' => 'http://www.easyhindityping.com/english-to-indonesian-translation',
+                'link' => DomainLinks::$links['en-to-id-translation'],
                 'title' => 'Translate english word, sentence & phrase into Indonesian for FREE.'
             ],
             'BN' => [ //Brunei
                 'label' => 'Malay Translation',
-                'link' => 'http://www.easyhindityping.com/english-to-malay-translation',
+                'link' => DomainLinks::$links['en-to-ms-translation'],
                 'title' => 'Translate english word, sentence & phrase into Malay for FREE.'
             ],
             'MY' => [
                 'label' => 'Malay Translation',
-                'link' => 'http://www.easyhindityping.com/english-to-malay-translation',
+                'link' => DomainLinks::$links['en-to-ms-translation'],
                 'title' => 'Translate english word, sentence & phrase into Malay for FREE.'
+            ],
+            'IR' => [
+                'label' => 'Farsi Translation',
+                'link' => DomainLinks::$links['en-to-fa-translation'],
+                'title' => 'Translate english word, sentence & phrase into Persian for FREE.'
+            ],
+            'ET' => [
+                'label' => 'Amharic Translation',
+                'link' => DomainLinks::$links['en-to-am-translation'],
+                'title' => 'Translate english word, sentence & phrase into Amharic for FREE.'
             ],
         ];
 
@@ -84,7 +94,7 @@ class TranslationLink extends Link
             CountriesGroup::arabicSpeakingCountriesCode(),
             [
                 'label' => 'Arabic Translation',
-                'link' => 'http://www.easyhindityping.com/english-to-arabic-translation',
+                'link' => DomainLinks::$links['en-to-ar-translation'],
                 'title' => 'Translate english word, sentence & phrase into Arabic for FREE.'
             ]
         );

@@ -103,7 +103,7 @@ class DynamicLinkTest extends TestCase
                 \TranslationLink::class,
                 [
                     'label' => 'Thai Translation',
-                    'link' => 'http://www.easythaityping.com',
+                    'link' => 'http://www.easyhindityping.com/english-to-thai-translation',
                     'title' => 'Translate english word, sentence & phrase into Thai for FREE.'
                 ],
             ],
