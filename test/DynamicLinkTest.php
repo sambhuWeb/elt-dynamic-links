@@ -90,6 +90,15 @@ class DynamicLinkTest extends TestCase
     {
         return [
             [
+                'EG',
+                \TranslationLink::class,
+                [
+                    'label' => 'Arabic Translation',
+                    'link' => 'http://www.easyhindityping.com/english-to-arabic-translation',
+                    'title' => 'Translate english word, sentence & phrase into Arabic for FREE.'
+                ],
+            ],
+            [
                 'TH',
                 \TranslationLink::class,
                 [
@@ -105,6 +114,15 @@ class DynamicLinkTest extends TestCase
                     'label' => 'Burmese Translation',
                     'link' => 'http://www.easyhindityping.com/english-to-burmese-translation',
                     'title' => 'Translate english word, sentence & phrase into Burmese for FREE.'
+                ],
+            ],
+            [
+                'AE', //UAE
+                \TypingLink::class,
+                [
+                    'label' => 'Arabic Typing',
+                    'link' => 'http://www.easyarabictyping.com',
+                    'title' => 'Type in English, get in Arabic for FREE.'
                 ],
             ],
             [
@@ -124,6 +142,15 @@ class DynamicLinkTest extends TestCase
                     'link' => 'http://www.easyhindityping.com',
                     'title' => 'Type in English, get in Hindi for FREE.'
                 ],
+            ],
+            [
+                'ir',//Iran
+                \TypingLink::class,
+                [
+                    'label' => 'Farsi Typing',
+                    'link' => 'http://www.easypersiantyping.com',
+                    'title' => 'Type in English, get in Farsi for FREE.'
+                ]
             ]
         ];
     }
