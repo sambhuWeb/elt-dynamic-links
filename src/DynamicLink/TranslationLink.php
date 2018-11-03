@@ -5,7 +5,7 @@ use ELT\DynamicLink\Lookup\DomainLinks;
 
 class TranslationLink extends Link
 {
-    public function links(): array
+    public function links()
     {
         $links = [
             'NP' => [

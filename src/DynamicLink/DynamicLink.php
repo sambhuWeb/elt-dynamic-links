@@ -19,7 +19,7 @@ class DynamicLink
      *
      * @return array
      */
-    public function getLink(String $countryCode, $inputData): array
+    public function getLink(String $countryCode, $inputData)
     {
         Guards::guardAgainstInvalidAlpha2($countryCode);
 

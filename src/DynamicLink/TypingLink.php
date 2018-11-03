@@ -5,7 +5,7 @@ use ELT\DynamicLink\Lookup\DomainLinks;
 
 class TypingLink extends Link
 {
-    public function links(): array
+    public function links()
     {
         $links = [
             'NP' => [

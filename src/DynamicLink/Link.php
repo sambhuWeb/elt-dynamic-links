@@ -5,12 +5,12 @@ abstract class Link implements LinkInterface
 {
     protected $link = [];
 
-    public function getLink(String $countryCode): array
+    public function getLink(String $countryCode)
     {   
         return $this->links()[$countryCode];
     }
 
-    public function getGroupLink(array $countriesGroup, array $groupLink): array
+    public function getGroupLink(array $countriesGroup, array $groupLink)
     {
         $groupLinks = [];
 
@@ -21,5 +21,5 @@ abstract class Link implements LinkInterface
         return $groupLinks;
     }
 
-    protected abstract function links(): array;
+    protected abstract function links();
 }

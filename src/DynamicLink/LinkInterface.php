@@ -3,5 +3,5 @@ namespace ELT\DynamicLink;
 
 interface LinkInterface
 {
-    public function getLink(String $countryCode): array;
+    public function getLink(String $countryCode);
 }
