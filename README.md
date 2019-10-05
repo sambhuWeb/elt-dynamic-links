@@ -1,4 +1,4 @@
-# Usuage #
+# Dynamic Links
 
 ## Get Translation Link / Typing Link by country ##
 
@@ -44,6 +44,65 @@ $this->dynamicLink = new DynamicLink();
 $this->dynamicLink->getLink($twoDigitCountryCode, $customInput)
 
 `
+
+# 2. Asset Link
+
+Allows accessing cdn (cloudinary, digital ocean space) link and fallback to local if config is turned off 
+
+
+   Scenario 1:
+   
+    $_SERVER['HTTP_HOST'] = 'http://easynepalityping.com';
+    
+   Input:
+   
+    $this->assetLink->generate(
+        ['local'], 'assets/keyboard/bangla/bengali_keyboard.php'
+    );
+            
+   Output:
+   
+    http://easynepalityping.com/assets/keyboard/bangla/bengali_keyboard.php
+    
+   --
+   
+   Scenario 2:
+      
+    define('USE_CLOUDINARY_CDN', true);
+    define('USE_DIGITAL_OCEAN_CDN', true);
+       
+   Input:
+    
+    $spaceNames = ['cloudinary', 'digital_ocean_space'];
+      
+    $this->assetLink->generate(
+        $spaceNames, 'assets/keyboard/bangla/bengali_keyboard.php', '', 'v1569962666/'
+    )
+               
+   Output:
+      
+    https://res.cloudinary.com/elt/image/upload/v1569962666/assets/keyboard/bangla/bengali_keyboard.php
+
+    
+   --
+   
+   Scenario 3:
+      
+    define('USE_CLOUDINARY_CDN', false);
+    define('USE_DIGITAL_OCEAN_CDN', true);
+       
+   Input:
+    
+    $spaceNames = ['cloudinary', 'digital_ocean_space'];
+      
+    $this->assetLink->generate(
+        $spaceNames, 'assets/keyboard/bangla/bengali_keyboard.php', '', 'v1569962666/'
+    )
+               
+   Output:
+      
+    https://everest-space.ams3.cdn.digitaloceanspaces.com/assets/keyboard/bangla/bengali_keyboard.php
+
 
 ## Availible Dynamin Link Class ##
 1. TranslationLink::class or 'TranslationLink'
