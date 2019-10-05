@@ -23,14 +23,41 @@ class AssetLinkTest extends TestCase
      */
     public function asset_link_class_returns_local_link()
     {
-        $_SERVER['HTTP_HOST'] = 'http://easynepalityping.com';
+        $_SERVER['HTTP_HOST'] = 'easynepalityping.com';
 
         $this->assertEquals(
-            'http://easynepalityping.com/public/assets/keyboard/bangla/bengali_keyboard.php',
+            'http://www.easynepalityping.com/public/assets/keyboard/bangla/bengali_keyboard.php',
             $this->assetLink->generate(
                 ['local'], 'assets/keyboard/bangla/bengali_keyboard.php'
             )
         );
+    }
+
+    /**
+     * @test
+     * @dataProvider differentHttpHostProvider
+     * @param string $httpHost
+     */
+    public function different_http_host_should_return_uniform_local_link(string $httpHost)
+    {
+        $_SERVER['HTTP_HOST'] = $httpHost;
+
+        $this->assertEquals(
+            'http://www.easyhindityping.com/public/assets/keyboard/bangla/bengali_keyboard.php',
+            $this->assetLink->generate(
+                ['local'], 'assets/keyboard/bangla/bengali_keyboard.php'
+            )
+        );
+    }
+
+    public function differentHttpHostProvider()
+    {
+        return [
+            ['easyhindityping.com'],
+            ['www.easyhindityping.com'],
+            ['http://www.easyhindityping.com'],
+            ['http://easyhindityping.com'],
+        ];
     }
 
     /**
@@ -40,10 +67,10 @@ class AssetLinkTest extends TestCase
      */
     public function invalid_spaces_names_returns_local_link(array $spaceNames)
     {
-        $_SERVER['HTTP_HOST'] = 'http://easyhindityping.com';
+        $_SERVER['HTTP_HOST'] = 'http://www.easyhindityping.com';
 
         $this->assertEquals(
-            'http://easyhindityping.com/public/assets/keyboard/bangla/bengali_keyboard.php',
+            'http://www.easyhindityping.com/public/assets/keyboard/bangla/bengali_keyboard.php',
             $this->assetLink->generate(
                 $spaceNames, 'assets/keyboard/bangla/bengali_keyboard.php'
             )

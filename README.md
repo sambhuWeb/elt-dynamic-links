@@ -62,7 +62,7 @@ Allows accessing cdn (cloudinary, digital ocean space) link and fallback to loca
             
    Output:
    
-    http://easynepalityping.com/public/assets/keyboard/bangla/bengali_keyboard.php
+    http://www.easynepalityping.com/public/assets/keyboard/bangla/bengali_keyboard.php
     
    --
    
