@@ -26,7 +26,7 @@ class AssetLinkTest extends TestCase
         $_SERVER['HTTP_HOST'] = 'http://easynepalityping.com';
 
         $this->assertEquals(
-            'http://easynepalityping.com/assets/keyboard/bangla/bengali_keyboard.php',
+            'http://easynepalityping.com/public/assets/keyboard/bangla/bengali_keyboard.php',
             $this->assetLink->generate(
                 ['local'], 'assets/keyboard/bangla/bengali_keyboard.php'
             )
@@ -43,7 +43,7 @@ class AssetLinkTest extends TestCase
         $_SERVER['HTTP_HOST'] = 'http://easyhindityping.com';
 
         $this->assertEquals(
-            'http://easyhindityping.com/assets/keyboard/bangla/bengali_keyboard.php',
+            'http://easyhindityping.com/public/assets/keyboard/bangla/bengali_keyboard.php',
             $this->assetLink->generate(
                 $spaceNames, 'assets/keyboard/bangla/bengali_keyboard.php'
             )

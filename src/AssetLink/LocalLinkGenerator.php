@@ -9,6 +9,6 @@ class LocalLinkGenerator implements AssetLinkGenerator
         string $additionalUrlParts,
         string $version
     ) {
-        return $_SERVER['HTTP_HOST'] . '/' . $spacePath;
+        return $_SERVER['HTTP_HOST'] . '/public/' . $spacePath;
     }
 }
